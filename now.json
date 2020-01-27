@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "timeout",
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ],
+  "functions": {
+    "api/*.js": {
+      "memory": 256
+    }
+  }
+}
