@@ -1,7 +1,6 @@
 {
   "version": 2,
   "public": true,
-  "name": "timeout",
   "routes": [
     { "src": "/(.*)", "dest": "/api/index.js" }
   ],

@@ -1,0 +1,23 @@
+{
+  "name": "timeout",
+  "version": "1.0.0",
+  "description": "An endpoint for timeout testing",
+  "main": "index.js",
+  "devDependencies": {
+    "measurement-protocol": "^0.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amio/timeout.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amio/timeout/issues"
+  },
+  "homepage": "https://github.com/amio/timeout#readme"
+}
