@@ -9,9 +9,21 @@ module.exports = async function (req, res) {
     return res.end(fs.readFileSync(readmeFile))
   }
 
-  const ms = Math.min(Number(req.url.replace('/', '')) || 0, 10000)
-  await new Promise(resolve => setTimeout(resolve, ms))
-  res.end(JSON.stringify({ status: 'ok', delayed: ms + 'ms' }))
+  res.writeHead(200, {
+    'content-type': 'text/plain'
+  })
+
+  const start = Date.now()
+  const delay = Math.min(Number(req.url.replace('/', '')) || 0, 10000)
+
+  const interval = setInterval(() => {
+    res.write(`${Date.now() - start}ms\n`)
+  }, 1000)
+
+  setTimeout(() => {
+    clearInterval(interval)
+    res.end(`${Date.now() - start}ms end.`)
+  }, delay)
 }
 
 if (require.main === module) {
