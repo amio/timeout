@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "public": true,
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ],
+  "functions": {
+    "api/*.js": {
+      "memory": 256
+    }
+  }
+}
